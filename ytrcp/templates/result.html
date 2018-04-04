@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %} result {% endblock %}
+
+{% block main %}
+<div class="row">
+    <div class="col-sm">
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe  id="ytplayer" class="embed-responsive-item" src="https://www.youtube.com/embed/{{ videoID }}" allowfullscreen></iframe>
+        </div>
+        <div class = "container">
+            <p>Views: {{ views }} Likes: {{ likes }} Dislikes: {{ dislikes }} Total comments: {{ total }}</p>
+        </div>
+        <div class = "container" id = "pickwinner">
+            <form action="/getw" >
+                  <button type="submit" id = "result" class="btn btn-dark">Pick winner</button>
+            </form>
+        </div>
+    </div>
+    <div class="col-sm">
+          {% block getw %}{% endblock %}
+    </div>
+
+</div>
+{% endblock %}

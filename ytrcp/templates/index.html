@@ -1,0 +1,27 @@
+
+{% extends "layout.html" %}
+
+{% block title %} Login {% endblock %}
+
+{% block main %}
+
+  <div class="jumbotron text-center">
+    <h1>YTRCP</h1>
+    <p>youtube random comment picker!</p>
+
+    <form class="form-inline justify-content-center" action="/get" method="post">
+      <div class="input-group">
+        <input class="form-control"  name="contestName" placeholder="Name" type="text"/>
+      </div>
+      <div class="input-group">
+        <input  class="form-control" name = "ytlink" size = "50" placeholder = "yuoutubelink" type = "text" required>
+        <div class="input-group-btn">
+          <button class="btn btn-danger" value = "Result" type="submit">Submit</button>
+        </div >
+      </div>
+    </form>
+  </div>
+
+
+
+{% endblock %}

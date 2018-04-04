@@ -1,0 +1,13 @@
+{% extends "result.html" %}
+
+{% block getw %}
+    </script>
+    <div class = "winner" id = "winner" >
+        <div class = "avatar"> <a href="{{ chUrl }}">
+            <img  alt="winner" src="{{ imgUrl }}" >
+            </a>
+        </div>
+        <div class = "name">{{ author }}</div>
+        <div class = "comment"> {{ comment }}</div>
+    </div>
+{% endblock %}
