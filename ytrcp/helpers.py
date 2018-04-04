@@ -7,7 +7,7 @@ import requests
 from flask import redirect, render_template, request, session
 from functools import wraps
 
-# ключи от апи key ="AIzaSyAqQhe-sNBebKOdlQqpPmft0UPE10-aRg8"
+
 def getkey():
     key = os.environ.get("api_key")
     return key
